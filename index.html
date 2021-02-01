@@ -34,7 +34,8 @@
 
         gtag('config', 'G-GYLLP7F2C5');
     </script>
-    <script data-ad-client="ca-pub-5872469255288915" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script data-ad-client="ca-pub-5872469255288915" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 
 <body class="container">
@@ -45,7 +46,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">                
+            <ul class="navbar-nav">
                 <li class="nav-item active">
                     <a class="nav-link" href="https://goodface.netlify.app/">요즘 얼굴등급 테스트
                     </a>
@@ -83,7 +84,7 @@
             </div>
             <p class="d-flex align-items-center pl-3">남자</p>
         </div>
-<!-- 
+        <!-- 
         <div class="mt-2 container d-flex justify-content-center ad-banner">
             <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-J0pU1pI6Yo5PVKMX" data-ad-width="320"
                 data-ad-height="100"></ins>
@@ -119,10 +120,11 @@
         </div>
     </div>
     <div class="d-md-flex flex-row bd-highlight mb-3 justify-content-between align-items-center">
-        <div class="noti">*사진은 저장되지 않아요.            
+        <div class="noti">*사진은 저장되지 않아요.
         </div>
         <div>
-            <a href="https://www.youtube.com/channel/UCQNE2JmbasNYbjGAcuBiRRg" class="youtube-link">제작 도움 -By 조코딩 유튜브 채널</a>
+            <a href="https://www.youtube.com/channel/UCQNE2JmbasNYbjGAcuBiRRg" class="youtube-link">제작 도움 -By 조코딩 유튜브
+                채널</a>
         </div>
     </div>
     <!-- kakao ad start -->
@@ -144,7 +146,7 @@
     <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
 
     <section id="yotube-bottom-link" class="mt-2 d-flex flex-column justify-content-center align-items-center"
-    onclick="gtag('event', '유튜브 클릭', {'event_category': '유튜브 클릭','event_label': '유튜브 홍보'});">
+        onclick="gtag('event', '유튜브 클릭', {'event_category': '유튜브 클릭','event_label': '유튜브 홍보'});">
         <h5 class="mt-1">요즘 핫한 youtube</h4>
             <div>
                 <iframe width="320" height="180" src="https://www.youtube.com/embed/b2ndrOpPhSs" frameborder="0"
@@ -164,11 +166,11 @@
 
     <footer class="footer pt-5 container d-flex justify-content-center align-items-center">
         <div>
-            <p>&copy; Wonderman777 2021. All Rights Reserved. </p>            
-        </div>       
+            <p>&copy; Wonderman777 2021. All Rights Reserved. </p>
+        </div>
 
     </footer>
-    
+
 
     <!-- Modal -->
     <div class="modal fade" id="adModal" tabindex="-1" role="dialog" aria-labelledby="adModalLabel" aria-hidden="true">
@@ -227,18 +229,43 @@
         function readURL(input) {
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
-                reader.onload = function (e) {
-                    $('.image-upload-wrap').hide();
-                    $('#loading').show();
-                    $('.file-upload-image').attr('src', e.target.result);
-                    $('.file-upload-content').show();
-                    $('.image-title').html(input.files[0].name);
-                };
                 reader.readAsDataURL(input.files[0]);
-                init().then(function () {
-                    predict();
-                    $('#loading').hide();
-                });
+                reader.onload = function (e) {
+                    var tempImage = new Image();
+                    tempImage.src = reader.result;
+                    tempImage.onload = function () {
+                        var canvas = document.createElement('canvas');
+                        var canvasContext = canvas.getContext("2d");
+                        var MAX_WIDTH = 400;
+                        var MAX_HEIGHT = 400;
+                        var width = tempImage.width;
+                        var height = tempImage.height;
+                        if (width > height) {
+                            if (width > MAX_WIDTH) {
+                                height *= MAX_WIDTH / width;
+                                width = MAX_WIDTH;
+                            }
+                        } else {
+                            if (height > MAX_HEIGHT) {
+                                width *= MAX_HEIGHT / height;
+                                height = MAX_HEIGHT;
+                            }
+                        }
+                        canvas.width = width;
+                        canvas.height = height;
+                        canvasContext.drawImage(this, 0, 0, width, height);
+                        var dataURI = canvas.toDataURL("image/jpeg");
+                        $('.image-upload-wrap').hide();
+                        $('#loading').show();
+                        $('.file-upload-image').attr('src', dataURI);
+                        $('.file-upload-content').show();
+                        $('.image-title').html(input.files[0].name);
+                        init().then(function () {
+                            predict();
+                            $('#loading').hide();
+                        });
+                    }
+                }
             } else {
                 removeUpload();
             }
@@ -282,7 +309,6 @@
             var image = document.getElementById("face-image")
             const prediction = await model.predict(image, false);
             prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
-            console.log(prediction);
             var resultTitle, resultExplain, resultCeleb;
             let degreeNum;
             if (document.getElementById("gender").checked) {
