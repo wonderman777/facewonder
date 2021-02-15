@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
+  <link href="https://wonderface.netlify.app//blog/tag/teachablemachine/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://wonderface.netlify.app//blog/" rel="alternate" type="text/html" />
+  <updated>2021-02-15T15:46:59+09:00</updated>
+  <id>https://wonderface.netlify.app//blog/tag/teachablemachine/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">Teachable Machine Project | </title>
+  
+
+  
+    <subtitle>Teachable Machine 활용</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">Teachable Machine 소개</title>
+      <link href="https://wonderface.netlify.app//blog/TeachableMachine-basic" rel="alternate" type="text/html" title="Teachable Machine 소개" />
+      <published>2020-02-10T01:40:00+09:00</published>
+      <updated>2020-02-10T01:40:00+09:00</updated>
+      <id>https://wonderface.netlify.app//blog/TeachableMachine-basic</id>
+      <content type="html" xml:base="https://wonderface.netlify.app//blog/TeachableMachine-basic">&lt;h2 id=&quot;teachable-machine-소개&quot;&gt;Teachable Machine 소개&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://teachablemachine.withgoogle.com/train&quot;&gt;&lt;strong&gt;Teachable Machine&lt;/strong&gt;&lt;/a&gt;를 활용하여 웹에서 AI를 쉽게 할 수 있도록 해줍니다.  &lt;br /&gt;
+코딩이 필요하지 않으며 이미지를 인식하고 사운드를 재생하도록 머신을 가르칠수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets\built\images\TeachableMachine\About.JPG&quot; alt=&quot;&quot; class=&quot;align-center&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;teachable-machine-사용법&quot;&gt;Teachable Machine 사용법&lt;/h2&gt;
+
+&lt;p&gt;이 사용법에는 바나나가 싱싱한지 알아보기 위해 머신러닝 모델을 만들어 보겠습니다.  &lt;br /&gt;
+바나나뿐만 아니라 비교 대상이 되는 어떤 이미지가 준비 되어 있으면 됩니다.    &lt;br /&gt;
+또한 이미지말고도 소리, 자세를 추정해 볼 수도 있습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;훈련-방법&quot;&gt;훈련 방법&lt;/h3&gt;
+
+&lt;p&gt;인공지능을 훈련하기 위해서는 처음에 다른 카테고리들을 만들어야 합니다. &lt;br /&gt;
+여기에서는 4종류 상태로 만들어 보겠습니다.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Too Early&lt;/li&gt;
+  &lt;li&gt;Ripe&lt;/li&gt;
+  &lt;li&gt;Too Late&lt;/li&gt;
+  &lt;li&gt;No Banaba&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets\built\images\TeachableMachine\Tuto-1.png&quot; alt=&quot;&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;각 카테고리에 샘플 이미지를 업로드 하기 위해 웹캠이나 이미지를 직접 추가 할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets\built\images\TeachableMachine\Tuto-2.gif&quot; alt=&quot;&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;그리고 바나나가 전혀 없는 이미지및 손만 있는 이미지도 추가하여 손이 들어 있는 바나나 이미지와 상관관계를 만들어야 합니다.&lt;/p&gt;
+
+&lt;p&gt;모든 카테고리가 준비되어 있으면 Train 버튼을 클릭하여 학습을 진행합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets\built\images\TeachableMachine\Tuto-3.gif&quot; alt=&quot;&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;그리고 학습이 종료 후 오른쪽화면에서 학습결과물을 웹캠및 이미지를 보여주어 테스트 할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets\built\images\TeachableMachine\Tuto-4.gif&quot; alt=&quot;&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;더-견고한-모델만들기&quot;&gt;더 견고한 모델만들기&lt;/h3&gt;
+
+&lt;p&gt;잘 학습되어 결과물이 잘 나오는것 같지만 학습된 모델은 단지 이미지를 픽셀의 숫자와 패턴으로만 바나나를 알고 있습니다.&lt;/p&gt;
+
+&lt;h5 id=&quot;두-개의-바나나-혼동&quot;&gt;두 개의 바나나 혼동&lt;/h5&gt;
+
+&lt;p&gt;동시에 두 개의 바나나를 들고 있다면 모델은 훈련 중에 그런 것에 대해 샘플을 본적이 없기 때문에 혼동할 것입니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets\built\images\TeachableMachine\Tuto-5.gif&quot; alt=&quot;두개의 바나나&quot; title=&quot;두개의 바나나&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;다양한-배경-및-조명&quot;&gt;다양한 배경 및 조명&lt;/h5&gt;
+
+&lt;p&gt;또는 다른 색 배경과 같이 다른 배경에서 바나나를 평가 해보십시오. 여전히 작동합니까?&lt;br /&gt;
+이 새로운 배경에서는 일부 카테고리가 약간 혼란스러워집니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets\built\images\TeachableMachine\Tuto-6.gif&quot; alt=&quot;&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;보완-방법&quot;&gt;보완 방법&lt;/h5&gt;
+
+&lt;p&gt;새로운 배경에 바나나를 사용하여 각 카테고리에 더 많은 샘플을 추가 합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets\built\images\TeachableMachine\Tuto-7.gif&quot; alt=&quot;&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;다른 환경에서 바나나 이미지를 더 추가하여 모델을 더욱 견고하게 만들어 다른 배경에서 작동 할 수 있습니다.&lt;br /&gt;
+이 배경에 바나나 샘플을 더 추가 했으므로 이제 인식하는 것이 조금 더 좋습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets\built\images\TeachableMachine\Tuto-8.gif&quot; alt=&quot;&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>wonderman777</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="TeachableMachine" />
+      
+
+      
+        <summary type="html">Teachable Machine 소개</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

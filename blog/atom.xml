@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title> - Articles</title>
+    <description>Teachable Machine 활용</description>
+    <link>
+    https://wonderface.netlify.app/</link>
+    
+      
+      <item>
+        <title>테스트 가이드</title>
+        
+          <description>&lt;h2 id=&quot;요즘-관상-테스트-가이드&quot;&gt;요즘 관상 테스트 가이드&lt;/h2&gt;
+
+</description>
+        
+        <pubDate>Thu, 11 Feb 2021 21:18:00 +0900</pubDate>
+        <link>
+        https://wonderface.netlify.app//Howto_guide</link>
+        <guid isPermaLink="true">https://wonderface.netlify.app//Howto_guide</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>애드몹으로 돈 벌기</title>
+        
+          <description>&lt;h2 id=&quot;애드몹으로-돈-벌기&quot;&gt;애드몹으로 돈 벌기&lt;/h2&gt;
+
+</description>
+        
+        <pubDate>Wed, 12 Feb 2020 03:40:00 +0900</pubDate>
+        <link>
+        https://wonderface.netlify.app//Howto_admob</link>
+        <guid isPermaLink="true">https://wonderface.netlify.app//Howto_admob</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>애드센스로 돈 벌기</title>
+        
+          <description>&lt;h2 id=&quot;애드센스로-돈-벌기&quot;&gt;애드센스로 돈 벌기&lt;/h2&gt;
+
+</description>
+        
+        <pubDate>Wed, 12 Feb 2020 01:40:00 +0900</pubDate>
+        <link>
+        https://wonderface.netlify.app//Howto_adsense</link>
+        <guid isPermaLink="true">https://wonderface.netlify.app//Howto_adsense</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Teachable Machine 소개</title>
+        
+          <description>&lt;h2 id=&quot;teachable-machine-소개&quot;&gt;Teachable Machine 소개&lt;/h2&gt;
+
+</description>
+        
+        <pubDate>Mon, 10 Feb 2020 01:40:00 +0900</pubDate>
+        <link>
+        https://wonderface.netlify.app//TeachableMachine-basic</link>
+        <guid isPermaLink="true">https://wonderface.netlify.app//TeachableMachine-basic</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Teachable Machine 적용하기</title>
+        
+          <description>&lt;h2 id=&quot;tmteachable-machine-적용하기&quot;&gt;(TM)Teachable Machine 적용하기&lt;/h2&gt;
+
+</description>
+        
+        <pubDate>Mon, 10 Feb 2020 01:40:00 +0900</pubDate>
+        <link>
+        https://wonderface.netlify.app//Howto_TM</link>
+        <guid isPermaLink="true">https://wonderface.netlify.app//Howto_TM</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Crawling 하기</title>
+        
+          <description>&lt;h3 id=&quot;crawling-자료수집&quot;&gt;Crawling (자료수집)&lt;/h3&gt;
+
+</description>
+        
+        <pubDate>Mon, 10 Feb 2020 01:40:00 +0900</pubDate>
+        <link>
+        https://wonderface.netlify.app//Howto_crawling</link>
+        <guid isPermaLink="true">https://wonderface.netlify.app//Howto_crawling</guid>
+      </item>
+      
+    
+  </channel>
+</rss>
